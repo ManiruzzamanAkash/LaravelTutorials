@@ -1,0 +1,17 @@
+body{
+  margin: 5%;
+}
+.wrapper{
+  width: 100%;
+}
+.content{
+  width: 70%;
+  float: left;
+}
+.sidebar{
+  width: 30%;
+  float: right;
+}
+.clear{
+  clear: both;
+}
