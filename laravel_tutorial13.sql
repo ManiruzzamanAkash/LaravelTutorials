@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2018 at 08:30 AM
+-- Generation Time: Feb 22, 2018 at 03:52 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `student_management`
+-- Database: `laravel_tutorial13`
 --
 
 -- --------------------------------------------------------
@@ -41,7 +41,7 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2018_01_31_161558_create_students_table', 1);
+(3, '2018_02_22_140541_create_posts_table', 1);
 
 -- --------------------------------------------------------
 
@@ -58,27 +58,24 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `students`
+-- Table structure for table `posts`
 --
 
-CREATE TABLE `students` (
+CREATE TABLE `posts` (
   `id` int(10) UNSIGNED NOT NULL,
-  `registration_id` int(11) NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `department_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `info` text COLLATE utf8mb4_unicode_ci,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `students`
+-- Dumping data for table `posts`
 --
 
-INSERT INTO `students` (`id`, `registration_id`, `name`, `department_name`, `info`, `created_at`, `updated_at`) VALUES
-(1, 5385, 'Maniruzzaman Akash', 'CSE', 'I love Programming', '2018-01-30 18:00:00', '2018-01-30 18:00:00'),
-(2, 5360, 'Polash Rana', 'CSE', 'I love Movie', '2018-01-30 18:00:00', '2018-01-30 18:00:00'),
-(4, 5345, 'Musa', 'CSE2', 'Best Friend', '2018-01-31 11:45:26', '2018-02-01 00:51:02');
+INSERT INTO `posts` (`id`, `title`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'This is our first post', 'This is our first postThis is our first postThis is our first postThis is our first postThis is our first postThis is our first postThis is our first post by php programming', NULL, NULL),
+(2, 'This Second Post', 'Java Programmgnin Second PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond Post\r\n\r\nSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond PostSecond Post', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -113,9 +110,9 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `students`
+-- Indexes for table `posts`
 --
-ALTER TABLE `students`
+ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -135,10 +132,10 @@ ALTER TABLE `users`
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `students`
+-- AUTO_INCREMENT for table `posts`
 --
-ALTER TABLE `students`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `posts`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `users`
 --
